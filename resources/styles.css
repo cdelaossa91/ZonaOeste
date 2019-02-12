@@ -1,0 +1,42 @@
+#facebook i {
+    color: cornflowerblue;
+}
+
+#email i {
+    color: rgb(255, 153, 0);
+}
+
+#phone i {
+    color: #33cc33;
+}
+
+#language i {
+    color: #ff0066;
+
+}
+
+
+#homehero {
+    background-image: linear-gradient(rgba(0, 0, 0, -0.8), rgba(0, 0, 0, 0.2)), url("minibed.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+
+#servhero {
+    background-image: linear-gradient(rgba(0, 0, 0, -0.8), rgba(0, 0, 0, 0.6)), url("home.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+#prophero {
+    background-image: linear-gradient(rgba(0, 0, 0, -0.8), rgba(0, 0, 0, 0.6)), url("housing.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
