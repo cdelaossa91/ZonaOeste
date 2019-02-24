@@ -31,7 +31,7 @@ include_once("dataheader.php");
             <!--Ubicacion-->
                 <div class="form-group mt-4">
                     <label for="Ubicacion">Ubicacion</label>
-                     <textarea class="form-control" name="ubicacion" rows="2"></textarea>
+                     <textarea class="form-control" name="ubicacion" rows="2" required></textarea>
             </div>
                
             <!-- Tabla infoprincipal--->
@@ -56,13 +56,13 @@ include_once("dataheader.php");
                   
                     <div class="form-group mt-4">
                     <label for="Precio">Precio:</label>
-                    <input type="number" name="precio" class="form-control">
+                    <input type="number" name="precio" class="form-control" required>
                     </div>
                     
                      <!-- Tabla caracteristicas--->
                     <div class="form-group mt-4">
                         <label for="Descripcion">Descripcion:</label>
-                        <textarea class="form-control" rows="4" name="descripcion"></textarea>
+                        <textarea class="form-control" rows="4" name="descripcion" required></textarea>
                     </div>
 
                     

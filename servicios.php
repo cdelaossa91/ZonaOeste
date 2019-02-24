@@ -41,17 +41,17 @@
            
               <div class="form-group m-4">
                <label for="Nombre">Nombre Completo:</label>
-               <input type="text" class="form-control" id="nombre" name="nombre">
+               <input type="text" class="form-control" id="nombre" name="nombre" required>
            </div>
               
                    <div class="form-group m-4">
                    <label for="Email">Correo Electronico:</label>
-                   <input type="text" class="form-control" id="email" name="email">
+                   <input type="email" class="form-control" id="email" name="email" required>
                </div>
                
                   <div class="form-group m-4">
                    <label for="Telefono">Telefono:</label>
-                   <input type="tel" class="form-control" id="telefono" name="telefono">
+                   <input type="tel" class="form-control" id="telefono" name="telefono" required>
                </div>
               
                 <div class="form-group m-4">
@@ -73,11 +73,11 @@
               </div>
               <div class="form-group m-4">
                   <label for="Ubicacion">Ubicacion:</label>
-                  <input type="text" class="form-control" id="ubicacion" name="ubicacion">
+                  <input type="text" class="form-control" id="ubicacion" name="ubicacion" required>
               </div>
               <div class="form-group m-4">
                   <label for="Precio">Precio Estimado:</label>
-                  <input type="number" class="form-control" id="precio" name="precio">
+                  <input type="number" class="form-control" id="precio" name="precio" required>
               </div>
               <div class="form-group m-4">
                <label for="Fotos">Agregar Fotos:</label>

@@ -24,11 +24,11 @@
             <!--- ********* B. Busquedas Frecuentes *********-->
             <div class="col-sm">
                 <nav class="navbar-nav"> Busquedas Frecuentes:
-                    <li class="nav-item"><a href="#" class="nav-link py-1 text-white" >Casas</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link py-1 text-white" >Apartamentos</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link py-1 text-white" >Amueblados</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link py-1 text-white" >Terrenos</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link py-1 text-white" >Comercial</a></li>
+                    <li class="nav-item"><a href="propiedades.php" class="nav-link py-1 text-white" >Casas</a></li>
+                    <li class="nav-item"><a href="propiedades.php" class="nav-link py-1 text-white" >Apartamentos</a></li>
+                    <li class="nav-item"><a href="propiedades.php" class="nav-link py-1 text-white" >Amueblados</a></li>
+                    <li class="nav-item"><a href="propiedades.php" class="nav-link py-1 text-white" >Terrenos</a></li>
+                    <li class="nav-item"><a href="propiedades.php" class="nav-link py-1 text-white" >Comercial</a></li>
 
                 </nav>
             </div>
