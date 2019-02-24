@@ -1,8 +1,6 @@
 <?php 
 session_start();
-include_once("../../header.php"); 
-
-
+include_once("dataheader.php"); 
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +13,7 @@ include_once("../../header.php");
 
 <body>
 
-    <div class="container mt-3">
+    <div class="container my-3">
         <a href="database.php" class="btn btn-secondary my-5">Inicio</a>
         <h3>Agregar Propiedad</h3>
         
@@ -47,6 +45,16 @@ include_once("../../header.php");
                     
                   
                     <div class="form-group mt-4">
+                    <label for="Habitaciones">Habitaciones</label>
+                    <input type="number" name="habitaciones" class="form-control">
+                    </div>
+                    
+                      <div class="form-group mt-4">
+                    <label for="Ba&ntilde;os">Ba&ntilde;os</label>
+                    <input type="number" name="banos" class="form-control">
+                    </div> 
+                  
+                    <div class="form-group mt-4">
                     <label for="Precio">Precio:</label>
                     <input type="number" name="precio" class="form-control">
                     </div>
@@ -58,7 +66,7 @@ include_once("../../header.php");
                     </div>
 
                     
-                    <input type="submit" name="agregar" value="Agregar" class="btn-primary btn-block mt-4">
+                    <input type="submit" name="agregar" value="Agregar" class="btn-primary btn-block my-5">
         
                        
         </form>
@@ -83,10 +91,12 @@ include_once("../../header.php");
                     //infoprincipal
                     $categoria = $_POST['categoria'];
                     $ubicacion = $_POST['ubicacion'];
+                    $habitaciones = $_POST['habitaciones'];
+                    $banos = $_POST['banos'];
                     $precio = $_POST['precio'];
                     $descripcion = $_POST['descripcion'];
                     $creado= date("Y-m-d H:i:s");
-                    $result = mysqli_query($connection, "INSERT INTO infoprincipal(categoria,foto,ubicacion,precio,descripcion,creado) VALUES ('$categoria','$destino','$ubicacion', '$precio', '$descripcion', '$creado') ");
+                    $result = mysqli_query($connection, "INSERT INTO infoprincipal(categoria,foto,ubicacion,habitaciones,banos,precio,descripcion,creado) VALUES ('$categoria','$destino','$ubicacion','$habitaciones','$banos', '$precio', '$descripcion', '$creado') ");
                         
                     //success message
                     echo "<div class='container alert alert-success my-2'>La propiedad ha sido agregada satisfactoriamente</div>";
@@ -100,3 +110,6 @@ include_once("../../header.php");
 
 
 </html>
+
+
+<?php include("../../footer.php"); ?>

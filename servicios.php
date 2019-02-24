@@ -2,7 +2,7 @@
 
     <!-- ****************** INDICE***************
             A. Jumbotron
-        
+            B. COntactenos
             C. Enliste su Propiedad
     
     
@@ -21,7 +21,7 @@
        
         <!--*************B.Contactenos*********-->
      <div class="container px-lx-0 mb-4">
-         <div class="container my-5 clearfix">
+         <div class="container my-5 clearfix" id="contactenos">
            
           
          <a href="https://www.google.com/maps/dir//9.9355015,-84.1348705/@9.9351064,-84.1318104,17.25z"><img src="resources/mapa.PNG" class="img float-left p-5" alt="direccion"></a> 
@@ -33,49 +33,61 @@
         
         </div>
         <!-- ************  C. Enliste Su Propiedad  ***********--> 
-       <div id="enliste" class="container my-5">
+       <div id="enliste" class="container my-5" id="enliste">
            <h2>Enliste Su Propiedad</h2>
            <p class="text-justify"> Si usted es un propietario interesado en vender o alquilar su propiedad con nosotros, por favor llene el siguiente formulario con la informacion de su propiedad.</p>
            
-           <form>
-           <div class="form-group m-4">
-               <label for="Nombre">Nombre Completo:</label>
-               <input type="text" class="form-control" id="nombre">
-           </div>
-               <div class="form-group m-4">
-                   <label for="Email">Correo Electronico:</label>
-                   <input type="text" class="form-control" id="email">
-               </div>
-               <div class="form-group m-4">
-                   <label for="Telefono">Telefono:</label>
-                   <input type="tel" class="form-control" id="telefono">
-               </div>
+           <form action="servicios.php" method="POST" name="solicitud" enctype="multipart/form-data">
+           
               <div class="form-group m-4">
+               <label for="Nombre">Nombre Completo:</label>
+               <input type="text" class="form-control" id="nombre" name="nombre">
+           </div>
+              
+                   <div class="form-group m-4">
+                   <label for="Email">Correo Electronico:</label>
+                   <input type="text" class="form-control" id="email" name="email">
+               </div>
+               
+                  <div class="form-group m-4">
+                   <label for="Telefono">Telefono:</label>
+                   <input type="tel" class="form-control" id="telefono" name="telefono">
+               </div>
+              
+                <div class="form-group m-4">
                  <label for="Tipo de Inmueble">Tipo de Inmueble:</label>
-                  <select name="" id="inmueble" class="form-control">
-                      <option>Casa</option>
-                      <option>Apartamento</option>
-                      <option>Terreno</option>
-                      <option>Local Comercial</option>
+                  <select id="inmueble" class="form-control" name="inmueble">
+                      <option value="Casa">Casa</option>
+                      <option value="Apartamentos">Apartamento</option>
+                      <option value="Terreno">Terreno</option>
+                      <option value="Local Comercial">Local Comercial</option>
+                  </select>
+              </div>
+                
+                <div class="form-group m-4">
+                 <label for="Tipo de Contrato">Tipo de Contrato:</label>
+                  <select id="contrato" class="form-control" name="contrato">
+                      <option value="Alquiler">Alquiler</option>
+                      <option value="Venta">Venta</option>
                   </select>
               </div>
               <div class="form-group m-4">
                   <label for="Ubicacion">Ubicacion:</label>
-                  <input type="text" class="form-control" id="ubicacion">
+                  <input type="text" class="form-control" id="ubicacion" name="ubicacion">
               </div>
               <div class="form-group m-4">
                   <label for="Precio">Precio Estimado:</label>
-                  <input type="number" class="form-control" id="precio">
+                  <input type="number" class="form-control" id="precio" name="precio">
               </div>
               <div class="form-group m-4">
                <label for="Fotos">Agregar Fotos:</label>
                  <div class="custom-file">
-                  <input type="file" class="custom-file-input">
+                  <input type="file" class="custom-file-input" name="imagen">
                   <label class="custom-file-label"></label>
                   </div>
                   
-               <button class="btn btn-block btn-info
-               my-5" onclick="enlistar()">Enviar</button>
+               <input class="btn btn-block btn-info
+               my-5" type="submit" value="Enviar" name="enviar">
                </div>
                
            </form>
@@ -90,33 +102,35 @@
         
     </div>
    
-    <script type="text/javascript">
-        var nombre;
-        var email;
-        var telefono;
-        var ubicacion;
-        var precio;
-        var result;
-        
-        function enlistar(){
-            nombre=document.getElementById('nombre').value;
-            email=document.getElementById('email').value;
-            telefono=document.getElementById('telefono').value;
-            ubicacion=document.getElementById('ubicacion').value;
-            precio=document.getElementById('precio').value;
-            result= document.getElementById('result');
+ <!--***************** PHP form********************-->
+   <?php 
+                
+                    if(isset($_POST['enviar'])){
+                  
+                    include_once("resources/database/dataconfig.php");
+                    
+                    //fotos
+                    $imagen=$_FILES['imagen']['name'];  
+                    $ruta=$_FILES['imagen']['tmp_name'];
+                    $destino ="resources/database/propiedadpics/solicitudes/".$imagen;
+                    copy($ruta,$destino);
+                      
+                    
+                    //solicitudes
+                    $nombre = $_POST['nombre'];
+                    $email = $_POST['email'];
+                    $telefono = $_POST['telefono'];
+                    $inmueble = $_POST['inmueble'];
+                    $contrato = $_POST['contrato'];
+                    $ubicacion = $_POST['ubicacion'];
+                    $precio = $_POST['precio'];
+                    $result = mysqli_query($connection, "INSERT INTO solicitudes(nombre,email,telefono,inmueble,contrato,ubicacion,precio,foto) VALUES ('$nombre','$email','$telefono','$inmueble','$contrato','$ubicacion', '$precio','$destino') ");
+                        
+                    //success message
+                    echo "<div class='container alert alert-success my-2'>Su solicitud ha sido enviada satisfactoriamente. Pronto nos pondremos en contacto con usted.</div>";
+                }
             
-            if(nombre!="" && email!="" && telefono!="" && ubicacion!=""
-              && precio!=""){
-                 result.innerHTML="Su formulario ha sido enviado satisfactoriamente";   
-               } else {
-                result.innerHTML="Favor llene todos los campos";
-            }
-        }
-        
-        
-    </script>
- 
+            ?>
     
    
   <?php include("footer.php"); ?>

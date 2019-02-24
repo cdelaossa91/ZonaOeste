@@ -39,41 +39,42 @@
     <h2 class="text-center my-5 text-secondary">Busquedas Frecuentes</h2>
     <div class="row shadow py-3">
         <div class="col-sm-3">
-            <div class="card text-white">
-                <a href="propiedades.php"><img src="resources/casa.jpg" class="card-img " alt="Casas"></a>
+           <a href="propiedades.php"> <div class="card text-white">
+                <img src="resources/casa.jpg" class="card-img " alt="Casas">
                 <div class="card-img-overlay">
-                     <h2 class="card-title text-center text-light">Casas</h2>
+                    <h2 class="card-title text-center text-light">Casas</h2>
                 </div>
-            </div>
+               </div> </a>
         </div>
         <div class="col-sm-3">
-            <div class="card text-white">
-                <a href="propiedades.php"> <img src="resources/apartamento.jpg" class="card-img" alt="Apartamentos"></a>
+             <a href="propiedades.php"><div class="card text-white">
+               <img src="resources/apartamento.jpg" class="card-img" alt="Apartamentos">
                 <div class="card-img-overlay">
                 <h2 class="card-title text-center text-light">Apartamentos</h2>
                 </div>
-            </div>
+                 </div></a>
         </div>
         <div class="col-sm-3">
-            <div class="card text-white">
-               <a href="propiedades.php"> <img src="resources/local.jpg" class="card-img" alt="Locales Comerciales"></a>
+            <a href="propiedades.php"> <div class="card text-white">
+              <img src="resources/local.jpg" class="card-img" alt="Locales Comerciales">
                 <div class="card-img-overlay">
                 <h2 class="card-title text-center text-light">Locales Comerciales</h2>
                 </div>
-            </div>
+                </div></a>
         </div>
         <div class="col-sm-3">
-            <div class="card text-white">
-               <a href="propiedades.php"> <img src="resources/terreno.jpg" class="card-img" alt="Terrenos"></a>
+           <a href="propiedades.php">  <div class="card text-white">
+                <img src="resources/terreno.jpg" class="card-img" alt="Terrenos">
                 <div class="card-img-overlay">
                 <h2 class="card-title text-center text-light">Terrenos</h2>
                 
             </div>
-        </div>
+               </div></a>
     </div>
 </div>
     </div>
    <!-- ******************* C. Quienes Somos ***************-->
+    
     <!-- ******************* 1. Descripcion ***************-->   
      <div class="container px-lx-0 mb-4">
     <div id="quiensomos">
@@ -89,7 +90,7 @@
         
 
     </div>
-
+    
          <!-- ******************* 2. Equipo Cards ***************-->      
         <div class="container">        
                <div class="card-deck m-5">
@@ -101,7 +102,7 @@
                         <p class="card-text lead">Propietaria</p>
                         <p class="card-text text-secondary">Telefono: +506 8894 8504</p>
                         <hr>
-                        <p class="card-text text-justify">Lorem ipsizzle dolizzle tellivizzle amizzle, pimpin' pizzle nizzle. Nullizzle black velizzle, yo shiznit, suscipit stuff, gravida vel, sheezy. Break yo neck, yall eget tortizzle. Sure erizzle. That's the shizzle doggy dolor dapibizzle turpis tempizzle mofo. Maurizzle shizzlin dizzle shit izzle sure. Praesent nec turpis izzle leo fizzle molestie. Vivamus vestibulizzle daahng dawg shiznit pimpin'.</p>
+                        <p class="card-text text-justify">Graduada de Administracion de Empresas de la Universidad Nacional. Cuenta con mas de 10 a&ntilde;os de experiencia en bienes raices.</p>
                         </div>
              
             </div>
@@ -114,7 +115,7 @@
                     <p class="card-text lead">Propietario</p>
                     <p class="card-text text-secondary">Telefono: +506 8337 6163</p>
                     <hr>
-                    <p class="card-text text-justify">Lorem ipsizzle dolizzle tellivizzle amizzle, pimpin' pizzle nizzle. Nullizzle black velizzle, yo shiznit, suscipit stuff, gravida vel, sheezy. Break yo neck, yall eget tortizzle. Sure erizzle. That's the shizzle doggy dolor dapibizzle turpis tempizzle mofo. Maurizzle shizzlin dizzle shit izzle sure. Praesent nec turpis izzle leo fizzle molestie. Vivamus vestibulizzle daahng dawg shiznit pimpin'.</p>
+                    <p class="card-text text-justify">Graduado de Administracion de Empresas del Instituto Tecnologico de Costa Rica. Cuenta con mas de 10 a&ntilde;os de experiencia en bienes raices.</p>
                    </div>
            
         </div>
@@ -141,8 +142,7 @@
                             <p class="card-text text-justify">Para el arrendador: Le ofrecemos las mejores opciones inmobiliarias en la zona, con
                                 precios competitivos que se ajusten a sus necesidades. </p>
                             <p class="card-text text-justify"> Para el arrendante: Le acompañamos y asesoramos en el proceso del alquiler de su
-                            propiedad, procurando la búsqueda de un buen inquilino y así su experiencia sea
-                            gratificante.</p>
+                            propiedad, procurando la búsqueda de un buen inquilino y así su experiencia sea gratificante.</p>
                     </div>
                      
                      
@@ -200,7 +200,8 @@
            </div>
            
        </div>
-       
+    </div>
+
 </main>
 
 
